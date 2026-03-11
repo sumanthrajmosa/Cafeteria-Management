@@ -1,0 +1,212 @@
+/* System Settings Modal - Refined for Smart Cafeteria Aesthetic */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: var(--spacing-lg);
+    border-bottom: 2px solid var(--gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-600);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray-400);
+    line-height: 1;
+    transition: var(--transition-fast);
+}
+
+.modal-close:hover {
+    color: var(--primary-500);
+}
+
+.modal-tabs {
+    display: flex;
+    padding: 0 var(--spacing-lg);
+    border-bottom: 1px solid var(--gray-100);
+    gap: var(--spacing-lg);
+}
+
+.modal-tab {
+    padding: var(--spacing-md) 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    color: var(--gray-500);
+    cursor: pointer;
+    border-radius: 0;
+    transition: var(--transition-fast);
+}
+
+.modal-tab:hover {
+    color: var(--primary-500);
+}
+
+.modal-tab.active {
+    color: var(--primary-600);
+    border-bottom-color: var(--primary-600);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.settings-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.settings-desc {
+    color: var(--gray-500);
+    margin-bottom: var(--spacing-lg);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-table th {
+    background-color: var(--gray-50);
+    color: var(--gray-600);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 2px solid var(--gray-100);
+}
+
+.hours-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-50);
+    font-size: 0.875rem;
+}
+
+.hour-input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.875rem;
+}
+
+.hour-input:focus {
+    outline: none;
+    border-color: var(--primary-400);
+}
+
+.health-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.health-card {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.health-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-400);
+    text-transform: uppercase;
+}
+
+.health-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+/* Utilities used in the component */
+.text-success {
+    color: var(--success);
+}
+
+.text-error {
+    color: var(--error);
+}
+
+.mt-4 {
+    margin-top: var(--spacing-xl);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-2 {
+    gap: var(--spacing-sm);
+}
